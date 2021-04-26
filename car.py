@@ -21,7 +21,7 @@ class Car:
         """Represent driving the car."""
         self.drive_range = miles
         if self.fuel_tank.fuel_level <= 0:
-            print("You have run out of gas! You must add fuel to your fuel tank or completely fill up your fuel tank to continue driving.")
+            print("You have run out of gas! You must add fuel to your fuel tank to continue driving.")
         elif self.drive_range >= 30 and self.drive_range < 60:
             self.fuel_tank.fuel_level -= 1
             print("The car is moving.")
@@ -100,6 +100,11 @@ class Car:
             print(f"You drove your car for {miles} miles.")
             self.odometer_reading += miles
             print(f"Warning!!!! You are almost out of fuel! Add fuel now!")
+        elif self.drive_range > 390:
+            print("The car is moving.")
+            print(f"You drove your car for 390 miles and ran out of gas!")
+            self.fuel_tank.fuel_level -= 12
+            self.odometer_reading += 390
         elif self.fuel_tank.fuel_level <= 0:
             print("You have run out of gas!")
 
@@ -151,6 +156,61 @@ class FuelTank():
         self.fuel_capacity = 12
         self.fuel_level = 0
 
+    def read_fuel_level(self):
+        """Read the fuel level."""
+        if self.fuel_level <= 0:
+            print("Your fuel tank is empty.")
+        elif self.fuel_level == 1:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 2:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 3:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 4:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 5:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 6:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 7:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 8:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 9:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 10:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 11:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 12:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 13:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 14:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 15:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 16:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 17:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 18:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 19:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 20:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 21:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 22:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 23:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 24:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+        elif self.fuel_level == 25:
+            print(f"You have {self.fuel_level} gallons left in your tank.")
+
     def tank_size(self, fuel_capacity):
         """Define the size of the fuel tank."""
         self.fuel_capacity = fuel_capacity
@@ -196,6 +256,6 @@ class ElectricCar(Car):
 my_car = Car('hyundai', 'elantra', 2012)
 print(f"\n{my_car.get_descriptive_name()}")
 my_car.read_odometer()
+my_car.fuel_tank.read_fuel_level()
 my_car.fuel_tank.fill_tank()
-my_car.drive(375)
-my_car.drive(25)
+my_car.drive(165)
